@@ -1,0 +1,24 @@
+a {
+	text-decoration: none;
+  font-size: var(--Font-md);
+	color: var(--White);
+  opacity: 0.7;
+}
+li {
+  background-color: var(--Purple);
+	list-style: none;
+}
+
+li:hover {
+	background-color: var(--blue);
+}
+
+i {
+  background-color: var(--White);
+  opacity: 0.5;
+  border-radius: 5px;
+  font-size: var(--Font-lg);
+}
+li {
+  position: relative;
+}

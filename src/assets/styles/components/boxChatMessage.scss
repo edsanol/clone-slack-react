@@ -1,0 +1,42 @@
+.div-box-chat-container {
+  position: relative;
+  max-width: 100%;
+  border-top: 1px solid lightgray;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.div-box-chat {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 6px;
+}
+
+.img-chat-user-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+}
+.img-chat-user-description {
+  width: 20px;
+  height: 20px;
+  padding: 0px 3px;
+}
+.h2-chat-user-name {
+  font-size: var(--Font-md);
+  padding: 0px 3px;
+  font-weight: 900;
+}
+.div-chat-fecha {
+  font-size: var(--Font-sl);
+  padding: 0px 3px;
+  color: gray;
+}
+
+.p-chat-text-message {
+  font-size: var(--Font-sm);
+  min-height: 10px;
+  padding: 5px 0 5px 10px;
+}

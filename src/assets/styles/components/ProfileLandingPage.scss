@@ -1,0 +1,102 @@
+.div-profile-container {
+  width: 100%;
+  min-height: 100vh;
+}
+.div-profile-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 100;
+
+  h2 {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+  }
+  .profile-header-icon {
+    display: flex;
+    color: gray;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+.div-profile-box-container {
+  height: calc(100vh - 60px);
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.div-profile-box-container::-webkit-scrollbar {
+  display: none;
+}
+.section-profile-box-image {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #000;
+  }
+  p {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+}
+
+.profile-image {
+  width: 80%;
+  border: 1px solid #e0e0e0;
+  border-radius: 1.5rem;
+}
+
+.section-profile-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 0;
+  i {
+    border-radius: 18px;
+    background-color: #e0e0e0;
+    color: #000;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    padding: 12px;
+    cursor: pointer;
+  }
+  p {
+    margin-top: 0.7rem;
+    color: #888080;
+    font-size: 0.8rem;
+  }
+}
+.section-profile-slack {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0 0 12px;
+  .p-name {
+    margin-top: 5px;
+  }
+  .p-title {
+    margin-top: 15px;
+    color: #888080;
+    font-size: 0.8rem;
+  }
+}
+.div-profile-slack-button {
+  width: 100%;
+  height: 100px;
+}
+
+.p__profile-title{
+  color: gray;
+  font-size: 14px;
+}

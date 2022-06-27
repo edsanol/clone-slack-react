@@ -1,0 +1,128 @@
+
+.thread-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.div-thread-chat-container{
+    position: absolute;
+    top: 80px;
+    left: 941px;
+    width: 325px;
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.div-thread-chat-container-2{
+    position: absolute;
+    top: 200px;
+    left: 941px;
+    width: 325px;
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.div-thread-box-chat{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 6px;
+}
+
+.img-thread-chat-user-img{
+    width: 30px;
+    height: 30px;
+}
+.img-thread-chat-user-description{
+    width: 20px;
+    height: 20px;
+    padding: 0px 3px;
+}
+.h2-thread-chat-user-name{
+    font-size: var(--Font-md);
+    padding: 0px 3px;
+    font-weight: 900;
+}
+.div-thread-chat-date{
+    font-size: var(--Font-sl);
+    padding: 0px 3px;
+    color: gray;
+}
+
+.p-thread-chat-text-message{
+    padding-left: 10px;
+    font-size: var(--Font-sm);
+    overflow-y: auto;
+    border-radius: 10px;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+.span-reply-message{
+    padding-left: 10px;
+    font-size: var(--Font-sm);
+    height: 100px;
+    color: rgb(47, 47, 246);
+   
+}
+
+.div-thread-chat-reply-container{
+    display: flex;
+    flex-direction: column;
+}
+.div-thread-url{
+    color: var(--blue);
+}
+
+.thread-url-reply-container{
+    overflow-y: auto;
+    height: 150px;
+    margin-top: 4px;
+    margin-left: 10px;
+    h2{
+        font-size: var(--Font-md);
+    }
+    h3{
+        padding: 2px 0px;
+        font-size: var(--Font-sm);
+        color: var(--blue);
+    }
+}
+
+.thread-date-data{
+    display: flex;
+    padding: 2px 0px;
+    h4{
+        font-size: 11px;
+        color: gray;
+        
+    }
+}
+
+.div-info-thread-message-container{
+    // background-color: red;
+    text-align: center;
+   
+    p{
+        margin-top: 5px;
+        font-size: 12px;
+        color: gray;
+    }
+    span{
+        margin-top: 5px;
+        font-size: 12px;
+        color: gray;
+    }
+}

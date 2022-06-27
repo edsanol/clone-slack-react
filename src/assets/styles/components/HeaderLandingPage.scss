@@ -1,0 +1,208 @@
+.header {
+  &__nav {
+    display: flex;
+    background-color: var(--Purple-navbar);
+    justify-content: space-between;
+    height: 40px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+  &__div-left {
+    margin-left: 0;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+  }
+  &__div-center {
+    display: flex;
+    margin-left: 2rem;
+    width: 45rem;
+  }
+  &__div-icons {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 100;
+  }
+  &__a-icons {
+    color: var(--White);
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  &__div-input {
+    display: flex;
+    align-items: center;
+    max-width: 31.25rem;
+    width: 100%;
+  }
+  &__input-search {
+    width: 100%;
+    background-color: #381f41;
+    border: 1px solid #5f4c67;
+    border-radius: 5px;
+    color: var(--White);
+    opacity: 0.8;
+  }
+  &__input-search::placeholder {
+    color: var(--White);
+    text-align: center;
+    font-weight: 300;
+    font-size: var(--Font-sm);
+  }
+  &__div-question {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    height: 0.4rem;
+    width: 0.4rem;
+    margin-left: 0.8rem;
+    border: 2px solid var(--White);
+    border-radius: 50%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-right: 0.6rem;
+    cursor: pointer;
+  }
+  &__div-question p {
+    color: var(--White);
+    text-align: center;
+  }
+  &__div-question &__span-badge {
+    position: absolute;
+    top: -4px;
+    right: -5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid var(--Purple-navbar);
+    background: var(--White);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--White);
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  &__div-right {
+    max-width: 15rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 0.8rem;
+    justify-content: flex-end;
+  }
+  &__flag {
+    position: relative;
+    order: 0;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 7px 0 0 7px;
+    background-color: #3e2647;
+  }
+  &__perfil {
+    cursor: pointer;
+    position: relative;
+    order: 1;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 7px;
+    background: linear-gradient(to bottom right, red, orange);
+  }
+  &__span-badge-active {
+    position: absolute;
+    top: 17px;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 3px solid var(--Purple-navbar);
+    background: #34785c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #34785c;
+    font-size: 10px;
+    font-weight: 700;
+  }
+  &__span-badge-disactive {
+    position: absolute;
+    top: 17px;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 3px solid var(--Purple-navbar);
+    background: var(--gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--gray);
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  @media (max-width: 979px) {
+    #menu-aside {
+      display: block;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__div-center {
+      margin-left: 0.6rem;
+    }
+    &__div-right {
+      max-width: 5rem;
+      width: 100%;
+    }
+  }
+  @media (max-width: 600px) {
+    &__div-center {
+      margin-left: 0.2rem;
+    }
+    &__div-right {
+      max-width: 3rem;
+      width: 100%;
+    }
+    &__a-icons {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+  @media (max-width: 450px) {
+    #menu-aside {
+      display: none;
+    }
+    #menu-back {
+      display: block;
+    }
+  }
+  @media (max-height: 450px) {
+    &__nav {
+      display: none;
+    }
+    #menu-aside {
+      display: none;
+    }
+    #menu-back {
+      display: block;
+    }
+  }
+}
+#menu-aside {
+  display: none;
+  color: #fff;
+  cursor: pointer;
+}
+#menu-back {
+  display: none;
+  color: #fff;
+  cursor: pointer;
+}

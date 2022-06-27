@@ -1,0 +1,14 @@
+.rich__input-container {
+  width: 100%;
+  position: relative;
+  font-size: 30px;
+}
+.rich__input-btn {
+  position: absolute;
+  width: 35px;
+  z-index: 999999;
+  right: 10px;
+  bottom: -38px;
+  font-size: 18px;
+  font-weight: bold;
+}

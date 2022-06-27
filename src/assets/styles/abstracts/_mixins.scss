@@ -1,0 +1,27 @@
+@mixin aside-section-channels($mt) {
+  color: var(--White);
+  margin-left: 20px;
+  font-size: 15px;
+  opacity: 0.7;
+  margin-top: $mt;
+}
+
+@mixin list-channels-styles($pt, $pl) {
+  padding-top: $pt;
+  padding-left: $pl;
+  font-weight: 400;
+}
+
+@mixin hideScrollbar {
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+@mixin container__date-chat {
+  font: 13px sans-serif;
+  margin-top: 10px;
+  text-align: center;
+}
+

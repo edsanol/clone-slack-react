@@ -1,0 +1,120 @@
+.div-user-options-container {
+  position: fixed;
+  width: 302px;
+  height: 240px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  border: 1px solid #d5d5d5;
+  box-shadow: 0px 0px 4px 0px #000000;
+  z-index: 100;
+  right: -30px;
+  top: 4px;
+}
+#p-link {
+  color: #5892d4;
+  cursor: pointer;
+}
+#p-link:hover {
+  color: #3c71ad;
+}
+.div-user-options-header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding-top: 23px;
+  padding-left: 25px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d5d5d5;
+  img {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+  }
+  h2 {
+    font-size: 15px;
+    padding-left: 4px;
+  }
+  .state-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    p {
+      font-size: 13px;
+      padding-left: 16px;
+    }
+    .span-user-options-active {
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      left: 4px;
+      top: 5px;
+      border: 4px solid #34785c;
+      border-radius: 10px;
+    }
+    .span-user-options-desactive {
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      left: 4px;
+      top: 5px;
+      border: 4px solid rgb(224, 209, 123);
+      border-radius: 10px;
+    }
+  }
+}
+
+.div-user-options-body {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d5d5d5;
+  .hover-user-options {
+    cursor: pointer;
+    &:hover {
+      background-color: #2d649e;
+    }
+    & p:hover {
+      color: #fff;
+    }
+    & a {
+      text-decoration: none;
+      margin-left: 25px;
+      display: block;
+      padding: 4px 0px;
+      font-size: 16px;
+      line-height: 16px;
+      color: #1d1c1d;
+    }
+    & a:hover {
+      color: #fff;
+    }
+  }
+  p {
+    margin-left: 25px;
+    padding: 4px 0px;
+    font-size: 15px;
+    line-height: 18px;
+    color: #1d1c1d;
+  }
+}
+.div-user-options-logout {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  .hover-user-options {
+    cursor: pointer;
+    &:hover {
+      background-color: #2d649e;
+      color: #fff;
+    }
+    & p:hover {
+      color: #fff;
+    }
+  }
+  p {
+    margin-left: 25px;
+    padding: 4px 0px;
+    font-size: 15px;
+    line-height: 18px;
+    color: #1d1c1d;
+  }
+}

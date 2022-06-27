@@ -1,0 +1,21 @@
+
+.div-reply-messages{
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+    margin-left: 10px;
+    align-items: center;
+}
+.img-reply-users{
+    padding-right: 4px;
+    
+}
+.p-replies-users{
+    font-size: 12px;
+    color: rgb(60, 60, 209);
+    padding-right: 4px;
+}
+.p-replies-data{
+    font-size: 12px;
+    color: gray;
+}

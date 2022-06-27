@@ -1,0 +1,20 @@
+.channel-options__container {
+  margin: 0;
+  padding: 0;
+}
+.channel-options__options {
+  height: 40px;
+  color: #000000;
+  cursor: pointer;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+}
+.channel-options__options p {
+  padding: 0 10px;
+  margin: 0;
+}
+.channel-options__options:hover {
+  background-color: #2d649e;
+  color: #ffffff;
+}

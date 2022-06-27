@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Source+Sans+Pro:wght@200;600&display=swap');
+:root {
+  --font-standard: "Lato", sans-serif;
+
+    /*========== Colors ==========*/
+    --Purple: #360a3e;
+    --Purple-navbar: #2a0e33;
+    --White: #fff;
+    --Black: #000;
+    --green-line: #76AA7C;
+    --blue: #3C71A6;
+    --gray: #C4C4C4;
+  
+    /*========= Font-size ========*/
+
+    --Font-sl: 11px;
+    --Font-sm: 13px;
+    --Font-md: 15px;
+    --Font-lg: 18px;
+  
+    /*======= Font-weight ========*/
+    --font-medium: 400;
+    --font-bold: 700;
+}
+
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+}
+

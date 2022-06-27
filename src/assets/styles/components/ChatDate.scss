@@ -1,0 +1,37 @@
+@import '../abstracts/mixins';
+
+div.line-divider {
+  @include container__date-chat;
+  position: absolute;
+  top: -10px;
+  right: 50%;
+  transform: translate(85px, -50%);
+}
+div.line-divider:before {
+  @include container__date-chat;
+  border-top: 1px solid #dfdfdf;
+  content: '';
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+div.line-divider button-date {
+  @include container__date-chat;
+  background: #fff;
+  padding: 0 15px;
+}
+.button-date {
+  justify-content: center;
+  align-items: center;
+  padding: 7px 12px 7px 17px;
+  gap: 5px;
+  background: #ffffff;
+  border: 1px solid #dfdfdf;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 71px;
+  cursor: pointer;
+}

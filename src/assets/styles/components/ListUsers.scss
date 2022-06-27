@@ -1,0 +1,77 @@
+.list-users__container {
+  margin: 17px 0;
+  margin-left: 10px;
+  cursor: pointer;
+  position: relative;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+.list-users__container img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.list-users__container h2 {
+  font-size: 15px;
+  font-weight: 700;
+}
+.list-users__container p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #636263;
+  display: inline;
+}
+.list-users__container span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+}
+.btn__list-channels {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  padding: 5px;
+  background-color: #148567;
+  color: #fff;
+  border: 1px solid #148567;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+  width: 56px;
+}
+.btn_view_profile{
+  position: absolute;
+  right: 5px;
+  top: 18px;
+  background-color: #148567;
+  color: #fff;
+  border: 1px solid #148567;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 80px;
+  padding: 1px;
+  &:hover {
+    background-color: #1ab68c;
+    border: 1px solid #1ab68c;
+  }
+}
+.btn__list-users {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  padding: 5px;
+  background-color: #148567;
+  color: #fff;
+  border: 1px solid #148567;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+  width: 56px;
+}
+.list-users__container:hover {
+  background-color: #F8F8F8;
+}
+

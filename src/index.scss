@@ -1,0 +1,21 @@
+/* abstracts */
+@use "./assets/styles/abstracts/variables";
+@use "./assets/styles/abstracts/mixins";
+
+/* base */
+@use "./assets/styles/base/base";
+@use "./assets/styles/base/resets";
+
+/* components */
+
+@use "./assets/styles/components/boxChatMessage.scss";
+@use "./assets/styles/components/ThreadChatMessage.scss";
+@use "./assets/styles/components/HelpLandingPage.scss";
+@use "./assets/styles/components/aside.scss";
+@use "./assets/styles/pages/LandingPage.scss";
+@use "./assets/styles/pages/LoadingPage.scss";
+@use "./assets/styles/components/ChannelMessageGroup.scss";
+@use "./assets/styles/components/DirectMessageUser.scss";
+@use "./assets/styles/components/UserOptionsProfile.scss";
+@use "./assets/styles/pages/AboutUs.scss";
+@use "./assets/styles/pages/AboutProject.scss";

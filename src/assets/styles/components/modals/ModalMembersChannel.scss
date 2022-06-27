@@ -1,0 +1,47 @@
+.modalMembers {
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+  }
+  &__header span {
+    cursor: pointer;
+  }
+  &__div-search {
+    padding: 5px 25px;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  &__p-add {
+    margin-bottom: 12px;
+    color: #2D649E;
+    cursor: pointer;
+  }
+  &__input {
+    width: 100%;
+    height: 38px;
+    border: 1px solid var(--gray);
+    outline: none;
+    border-radius: 5px;
+    padding-left: 10px;
+  }
+  &__input:focus {
+    box-shadow: 0 0 0 1px #1775F1, 0 0 0 4px #CCDFEE;
+  }
+  &__div-listPeople {
+    position: sticky;
+    margin-left: 27px;
+    width: 90%;
+    height: calc(100% - 150px);
+    background: #FFF;
+    overflow-y: auto;
+    scrollbar-width: none;
+    transition: all .3s ease;
+    z-index: 200;
+  }
+  &__div-listPeople::-webkit-scrollbar {
+    display: none;
+  }
+}
+

@@ -1,0 +1,64 @@
+.list-channels__container {
+  margin: 17px 0;
+  margin-left: 10px;
+  cursor: pointer;
+  position: relative;
+  padding: 5px;
+}
+.list-channels__container h2 {
+  font-size: 15px;
+  font-weight: 700;
+}
+.list-channels__container p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #636263;
+  display: inline;
+}
+.list-channels__container span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+}
+.btn__list-channels {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  padding: 5px;
+  background-color: #148567;
+  color: #fff;
+  border: 1px solid #148567;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+  width: 56px;
+  margin-left: 30px;
+}
+.btn__list-channels_member {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  padding: 5px;
+  background-color: #F8F8F8;
+  color: gray;
+  border: none;
+  border-radius: none;
+  cursor: pointer;
+  display: none;
+  width: 60px;
+}
+.list-channels__container:hover {
+  .btn__list-channels {
+    display: inline;
+  }
+  .btn__list-channels_member{
+    display: inline;
+  }
+  background-color: #F8F8F8;
+  
+}
+.btn__list-channels:hover {
+  background-color: #1ab68c;
+  border: 1px solid #1ab68c;
+}
+
