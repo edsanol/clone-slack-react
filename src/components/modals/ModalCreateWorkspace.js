@@ -5,7 +5,10 @@ import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 import { createWorkspaceAction } from '../../store/actions/actionsAuth';
 
-export const ModalCreateWorkspace = ({ setopenedNewWorkspace }) => {
+export const ModalCreateWorkspace = ({
+  setopenedNewWorkspace,
+  setOpenedPopoverAddChannel,
+}) => {
   const {
     register,
     formState: { errors },
@@ -24,6 +27,7 @@ export const ModalCreateWorkspace = ({ setopenedNewWorkspace }) => {
       theme: 'colored',
     });
     setopenedNewWorkspace(false);
+    setOpenedPopoverAddChannel(false);
   };
 
   return (

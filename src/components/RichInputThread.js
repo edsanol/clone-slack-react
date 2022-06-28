@@ -10,6 +10,9 @@ export default function RichInputThread() {
   const { _id, fullName, image } = useSelector(
     (state) => state.userReducer.user
   );
+  async function timeout(delay) {
+    return await ((res) => setTimeout(res, delay));
+  }
 
   const log = () => {
     socket.emit('sendMessageThread', {
@@ -19,6 +22,7 @@ export default function RichInputThread() {
       image: image,
       message: editorRef.current.getContent(),
     });
+    timeout(1000);
     editorRef.current.setContent('');
   };
 
@@ -32,17 +36,14 @@ export default function RichInputThread() {
       <div className="container-rich">
         <BundledEditor
           onKeyDown={(e) => {
-            if(e.shiftKey && e.key === 'Enter') {
-
-            }
-            else if (e.key === 'Enter') {
+            if (e.shiftKey && e.key === 'Enter') {
+            } else if (e.key === 'Enter') {
               log();
             }
           }}
           onKeyUp={(e) => {
-            if(e.shiftKey && e.key === 'Enter') {
-            }
-            else if (e.key === 'Enter') {
+            if (e.shiftKey && e.key === 'Enter') {
+            } else if (e.key === 'Enter') {
               editorRef.current.setContent('');
             }
           }}

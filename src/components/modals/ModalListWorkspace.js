@@ -3,7 +3,10 @@ import { useSelector } from 'react-redux';
 import '../../assets/styles/components/modals/ModalMembersChannel.scss';
 import { ListWorkspace } from '../ListWorkspace';
 
-export const ModalListWorkspace = ({ setOpened }) => {
+export const ModalListWorkspace = ({
+  setOpened,
+  setOpenedPopoverAddChannel,
+}) => {
   const [newFilter, setNewFilter] = useState('');
   const inputStyle = {
     fontFamily: "'Lato', FontAwesome",
@@ -13,7 +16,7 @@ export const ModalListWorkspace = ({ setOpened }) => {
 
   // Filtro por nombre de canales
   const search = workspace.filter((workspace) =>
-  workspace.name.toLowerCase().includes(newFilter.toLowerCase())
+    workspace.name.toLowerCase().includes(newFilter.toLowerCase())
   );
 
   return (
@@ -43,6 +46,7 @@ export const ModalListWorkspace = ({ setOpened }) => {
               workspaceId={data._id}
               users={data.users}
               setOpened={setOpened}
+              setOpenedPopoverAddChannel={setOpenedPopoverAddChannel}
             />
           ))}
       </div>

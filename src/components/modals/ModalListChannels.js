@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import '../../assets/styles/components/modals/ModalMembersChannel.scss';
 import { ListChannels } from '../ListChannels';
 
-export const ModalListChannels = ({ setOpened }) => {
+export const ModalListChannels = ({ setOpened, setOpenedPopoverAddChannel }) => {
   const [newFilter, setNewFilter] = useState('');
   const inputStyle = {
     fontFamily: "'Lato', FontAwesome",
@@ -46,6 +46,7 @@ export const ModalListChannels = ({ setOpened }) => {
               users={data.users}
               channelId={data._id}
               setOpened={setOpened}
+              setOpenedPopoverAddChannel={setOpenedPopoverAddChannel}
             />
           ))}
       </div>

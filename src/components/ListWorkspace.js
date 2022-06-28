@@ -9,6 +9,7 @@ export const ListWorkspace = ({
   users,
   setOpened,
   workspaceId,
+  setOpenedPopoverAddChannel,
 }) => {
   const memberInWorkspace = useSelector((state) => state.authReducer.uid);
   const dispatch = useDispatch();
@@ -17,6 +18,7 @@ export const ListWorkspace = ({
     e.preventDefault();
     dispatch(addUserToWorkspaceAction({ workspaceId }));
     setOpened(false);
+    setOpenedPopoverAddChannel(false);
     toast.info(`You joined the ${name} successfully`, {
       position: 'top-center',
       theme: 'colored',

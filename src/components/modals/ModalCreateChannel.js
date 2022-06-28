@@ -8,7 +8,7 @@ import { ModalBecomePremium } from './ModalBecomePremium';
 import { ToastContainer } from 'react-toastify';
 import { toast } from 'react-toastify';
 
-export const ModalCreateChannel = ({ setOpenedNewChannel }) => {
+export const ModalCreateChannel = ({ setOpenedNewChannel, setOpenedPopoverAddChannel }) => {
   const [openedModal, setOpenedModal] = useState(false);
   const {
     register,
@@ -39,6 +39,8 @@ export const ModalCreateChannel = ({ setOpenedNewChannel }) => {
       dispatch(createChannelAction({ name, description, select, userId, workspaceId }));
       setOpenedNewChannel(false);
     }
+    
+    setOpenedPopoverAddChannel(false);
 
     toast.info('channel created successfully', {
       position: 'top-center',

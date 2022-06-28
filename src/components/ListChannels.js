@@ -10,6 +10,7 @@ export const ListChannels = ({
   users,
   channelId,
   setOpened,
+  setOpenedPopoverAddChannel,
 }) => {
   const memberInChannel = useSelector((state) => state.authReducer.uid);
   const dispatch = useDispatch();
@@ -18,6 +19,7 @@ export const ListChannels = ({
     e.preventDefault();
     dispatch(addUserToChannelAction({ channelId, memberInChannel }));
     setOpened(false);
+    setOpenedPopoverAddChannel(false);
     toast.info(`You joined the ${name} successfully`, {
       position: 'top-center',
       theme: 'colored',

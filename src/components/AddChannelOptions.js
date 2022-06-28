@@ -4,7 +4,7 @@ import { Modal } from '@mantine/core';
 import { ModalCreateChannel } from './modals/ModalCreateChannel';
 import { ModalListChannels } from './modals/ModalListChannels';
 
-export const AddChannelOptions = () => {
+export const AddChannelOptions = ({ setOpenedPopoverAddChannel }) => {
   const [opened, setOpened] = useState(false);
   const [openedNewChannel, setOpenedNewChannel] = useState(false);
 
@@ -22,7 +22,7 @@ export const AddChannelOptions = () => {
         withCloseButton={false}
         size="md"
         zIndex={999}>
-        {<ModalCreateChannel setOpenedNewChannel={setOpenedNewChannel} />}
+        {<ModalCreateChannel setOpenedNewChannel={setOpenedNewChannel} setOpenedPopoverAddChannel={setOpenedPopoverAddChannel}/>}
       </Modal>
       <div className="channel-options__options">
         <p type="button" onClick={() => setOpened(true)}>
@@ -36,7 +36,7 @@ export const AddChannelOptions = () => {
         withCloseButton={false}
         size="lg"
         zIndex={999}>
-        {<ModalListChannels setOpened={setOpened} />}
+        {<ModalListChannels setOpened={setOpened} setOpenedPopoverAddChannel={setOpenedPopoverAddChannel}/>}
       </Modal>
     </div>
   );

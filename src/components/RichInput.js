@@ -18,6 +18,10 @@ export default function RichInput() {
   const verifyChatUser = users.map((e) => e._id === activeChat);
   const verifyChatChannel = channels.map((e) => e._id === activeChat);
 
+  async function timeout(delay) {
+    return await ((res) => setTimeout(res, delay));
+  }
+
   const log = () => {
     if (editorRef.current && verifyChatUser.includes(true)) {
       socket.emit('sendMessageUser', {
@@ -28,7 +32,7 @@ export default function RichInput() {
         message: editorRef.current.getContent(),
         workSpaceId: workspaceActive,
       });
-
+      timeout(1000);
       editorRef.current.setContent('');
     }
 
@@ -41,7 +45,7 @@ export default function RichInput() {
         message: editorRef.current.getContent(),
         workSpaceId: workspaceActive,
       });
-
+      timeout(1000);
       editorRef.current.setContent('');
     }
   };
@@ -56,17 +60,14 @@ export default function RichInput() {
       <div className="container-rich">
         <BundledEditor
           onKeyDown={(e) => {
-            if(e.shiftKey && e.key === 'Enter') {
-
-            }
-            else if (e.key === 'Enter') {
+            if (e.shiftKey && e.key === 'Enter') {
+            } else if (e.key === 'Enter') {
               log();
             }
           }}
           onKeyUp={(e) => {
-            if(e.shiftKey && e.key === 'Enter') {
-            }
-            else if (e.key === 'Enter') {
+            if (e.shiftKey && e.key === 'Enter') {
+            } else if (e.key === 'Enter') {
               editorRef.current.setContent('');
             }
           }}

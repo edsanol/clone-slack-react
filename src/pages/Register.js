@@ -6,6 +6,8 @@ import { FooterLoginRegister } from '../components/FooterLoginRegister';
 import { useDispatch, useSelector } from 'react-redux';
 import { registerUserAction } from '../store/actions/actionsAuth';
 import { Link } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 export const Register = () => {
   const {
@@ -18,7 +20,14 @@ export const Register = () => {
   const workspaceid = useSelector((state) => state.authReducer.workspaceId);
 
   const onSubmit = (data) => {
-    const { fullName, email, password } = data;
+    const { fullName, email, password, repeatPassword } = data;
+    if (password !== repeatPassword) {
+      toast.error('Passwords do not match', {
+        position: 'bottom-right',
+        theme: 'colored',
+      });
+      return;
+    }
     dispatch(registerUserAction({ fullName, email, password, workspaceid }));
   };
 
@@ -110,6 +119,37 @@ export const Register = () => {
               minimum of 8 characters
             </p>
           )}
+          <label htmlFor="repeatPassword" className="mainForm__form-label">
+            Repeat password
+          </label>
+          <input
+            className="mainForm__form-input"
+            type="password"
+            name="repeatPassword"
+            id="repeatPassword"
+            placeholder="Repeat password"
+            {...register('repeatPassword', {
+              required: true,
+              minLength: 8,
+              pattern:
+                /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/,
+            })}
+          />
+          {errors.repeatPassword?.type === 'required' && (
+            <p className="input__error">⚠ The password field is required</p>
+          )}
+          {errors.repeatPassword?.type === 'minLength' && (
+            <p className="input__error">
+              ⚠ The password must have at least 8 characters
+            </p>
+          )}
+          {errors.repeatPassword?.type === 'pattern' && (
+            <p className="input__error">
+              ⚠ The password must have at least one uppercase letter, one
+              lowercase letter, a number or special character, and a length
+              minimum of 8 characters
+            </p>
+          )}
           <input
             data-cy="register-click-event"
             type="submit"
@@ -125,6 +165,7 @@ export const Register = () => {
       </main>
 
       <FooterLoginRegister />
+      <ToastContainer />
     </>
   );
 };
