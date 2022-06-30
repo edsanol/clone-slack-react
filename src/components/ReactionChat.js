@@ -30,10 +30,14 @@ export const ReactionChat = ({ messageId, likes, thread }) => {
             ? 'button_like_container'
             : 'button_outlike_container'
         }>
-        <i onClick={giveOfRemoveLike} className="bx bx-like"></i>
+        <i
+          data-cy="like-click-event"
+          onClick={giveOfRemoveLike}
+          className="bx bx-like"></i>
       </div>
 
       <div
+        data-cy="thread-click-event"
         className="button_thread_message"
         type="button"
         onClick={handleClickThreadShow}>

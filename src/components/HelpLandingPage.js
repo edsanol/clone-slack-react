@@ -170,9 +170,11 @@ export const HelpLandingPage = () => {
       <div className="help-footer-container">
         <div className="help-footer-subtitle">
           <h2>
-            <Link to="/project">About project</Link>
+            <Link to="/project">
+              About project{'  '}
+              <i className="fa-solid fa-arrow-up-right-from-square"></i>
+            </Link>
           </h2>
-          <i className="fa-solid fa-arrow-up-right-from-square"></i>
         </div>
         <button className="button-help-footer">
           <Link to="/aboutus">About us</Link>

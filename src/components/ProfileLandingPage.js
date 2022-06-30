@@ -33,13 +33,17 @@ export const ProfileLandingPage = () => {
           <img className="profile-image" src={image} alt="imagen de perfil" />
           <h2>{fullName}</h2>
           {occupation && <p>{occupation}</p>}
-          <p id="p-link" onClick={() => setOpened(true)}>
+          {/* <p id="p-link" onClick={() => setOpened(true)}>
             Add your occupation
-          </p>
+          </p> */}
         </section>
         <section className="section-profile-button">
           <i className="fa-solid fa-pen" onClick={() => setOpened(true)}></i>
-          <p>Edit your profile </p>
+          <p
+            className="p__edit-your-profile-text"
+            onClick={() => setOpened(true)}>
+            Edit your profile{' '}
+          </p>
           <Modal zIndex={1000} opened={opened} onClose={() => setOpened(false)}>
             {<ModalEditUser setOpened={setOpened} />}
           </Modal>

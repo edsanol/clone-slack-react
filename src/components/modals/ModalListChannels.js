@@ -24,11 +24,11 @@ export const ModalListChannels = ({ setOpened, setOpenedPopoverAddChannel }) => 
       </div>
 
       <div className="modalMembers__div-search">
-        <p className="modalMembers__p-add">Add channel</p>
+        <p className="modalMembers__p-add">Search and join a channel</p>
         <input
           type="text"
           className="modalMembers__input"
-          placeholder="       &#xf002;     Search members"
+          placeholder="       &#xf002;     Search channels"
           style={inputStyle}
           value={newFilter}
           onChange={(e) => setNewFilter(e.target.value)}

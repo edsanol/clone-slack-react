@@ -32,6 +32,7 @@ export const PopoverAddChannel = ({ name }) => {
       onClose={() => setOpened(false)}
       target={
         <p
+          data-cy="add-channel-click-event"
           type="button"
           className={name === '+' ? 'aside-button-workspace-plus' : ''}
           onClick={handleClick}>
@@ -41,11 +42,13 @@ export const PopoverAddChannel = ({ name }) => {
       width={240}
       position="bottom"
       closeOnClickOutside={false}>
+
       {name === 'add channel' ? (
         <AddChannelOptions setOpenedPopoverAddChannel={setOpened} />
       ) : (
         <AddWorkspaceOption setOpenedPopoverAddChannel={setOpened} />
       )}
+
     </Popover>
   );
 };

@@ -97,16 +97,24 @@ export const UserOptionsProfile = ({ setOpenedPop }) => {
             Edit Profile
           </p>
         </div>
-        <div className="hover-user-options" onClick={handleClickProfileShow}>
+        <div
+          data-cy="view-click-event"
+          className="hover-user-options"
+          onClick={handleClickProfileShow}>
           <p>View Profile</p>
         </div>
-        <div className="hover-user-options">
-          <Link to="change-password">Change Password</Link>
+        <div
+          // data-cy="change-password-click-event"
+          className="hover-user-options">
+          <Link data-cy="change-password-click-event" to="change-password">
+            Change Password
+          </Link>
         </div>
       </div>
 
       <div className="div-user-options-logout">
         <div
+          data-cy="logout-click-event"
           type="button"
           className="hover-user-options"
           onClick={handleClickLogout}>

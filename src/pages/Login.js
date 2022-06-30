@@ -61,18 +61,18 @@ export const Login = () => {
             type="password"
             name="password"
             id="password"
-            placeholder="Ingresa tu contraseña"
+            placeholder="Enter your password"
             {...register('password', {
               required: true,
-              minLength: 8,
-              pattern:
-                /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/,
+              // minLength: 8,
+              // pattern:
+              //   /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/,
             })}
           />
           {errors.password?.type === 'required' && (
             <p className="input__error">⚠ The password field is required</p>
           )}
-          {errors.password?.type === 'minLength' && (
+          {/* {errors.password?.type === 'minLength' && (
             <p className="input__error" data-cy="error-password-2-input">
               ⚠ The password must have at least 8 characters
             </p>
@@ -83,7 +83,7 @@ export const Login = () => {
               lowercase letter, a number or special character, and a length
               minimum of 8 characters
             </p>
-          )}
+          )} */}
           <input
             data-cy="login-click-event"
             type="submit"

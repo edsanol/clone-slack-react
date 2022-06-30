@@ -169,6 +169,10 @@ export function registerUserAction(data) {
       dispatch(registerUser(response.data));
     } catch (error) {
       console.log(error);
+      toast.error('Error - There is already a user with that email', {
+        position: 'top-center',
+        theme: 'colored',
+      });
     }
   };
 }

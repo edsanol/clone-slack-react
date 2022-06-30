@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import guitar from '../assets/images/about-images/guitar.png';
 import daniel from '../assets/images/about-images/daniel.png';
+import juan from '../assets/images/about-images/juan.png';
 
 export const AboutUs = () => {
   return (
@@ -16,11 +17,7 @@ export const AboutUs = () => {
         <div className="card-container-1">
           <h2>Juan Alejandro Albites Tapia</h2>
           <div className="div__card-product-container-about">
-            <img
-              className="img__card-product-img-about"
-              src={guitar}
-              alt="img"
-            />
+            <img className="img__card-product-img-about" src={juan} alt="img" />
             <div>
               <h3 className="h2__card-product-title-about">
                 {' '}

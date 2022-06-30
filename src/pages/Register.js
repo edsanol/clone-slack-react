@@ -7,7 +7,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { registerUserAction } from '../store/actions/actionsAuth';
 import { Link } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+
 import { toast } from 'react-toastify';
+
 
 export const Register = () => {
   const {

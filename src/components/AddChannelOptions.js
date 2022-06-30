@@ -11,7 +11,10 @@ export const AddChannelOptions = ({ setOpenedPopoverAddChannel }) => {
   return (
     <div className="channel-options__container">
       <div className="channel-options__options">
-        <p type="button" onClick={() => setOpenedNewChannel(true)}>
+        <p
+          data-cy="create-channel-click-event"
+          type="button"
+          onClick={() => setOpenedNewChannel(true)}>
           Create a new channel
         </p>
       </div>
@@ -25,7 +28,10 @@ export const AddChannelOptions = ({ setOpenedPopoverAddChannel }) => {
         {<ModalCreateChannel setOpenedNewChannel={setOpenedNewChannel} setOpenedPopoverAddChannel={setOpenedPopoverAddChannel}/>}
       </Modal>
       <div className="channel-options__options">
-        <p type="button" onClick={() => setOpened(true)}>
+        <p
+          data-cy="browse-channel-click-event"
+          type="button"
+          onClick={() => setOpened(true)}>
           Browse channel list
         </p>
       </div>

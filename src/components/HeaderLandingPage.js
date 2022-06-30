@@ -25,7 +25,7 @@ export const HeaderLandingPage = () => {
 
   const handleClickBack = () => {
     dispatch(getActiveChatAction(null));
-  }
+  };
 
   const handleClickHelpShow = () => {
     OpenCloseThread === 'hiddenAll'
@@ -42,13 +42,18 @@ export const HeaderLandingPage = () => {
             className="bx bx-menu"
             onClick={handleClickAside}
             id="menu-aside"></i>
-          <i className="bx bx-arrow-back" id="menu-back" type="button" onClick={handleClickBack}></i>
+          <i
+            className="bx bx-arrow-back"
+            id="menu-back"
+            type="button"
+            onClick={handleClickBack}></i>
         </div>
 
         <div className="header__div-center"></div>
 
         <div className="header__div-right">
           <div
+            data-cy="help-click-event"
             className="header__div-question"
             type="button"
             onClick={handleClickHelpShow}>

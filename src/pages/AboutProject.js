@@ -26,12 +26,14 @@ import scrum from '../assets/images/about-images/scrum.png';
 import jira from '../assets/images/about-images/jira.png';
 import cloudinary from '../assets/images/about-images/cloudinary.png';
 import diagrama from '../assets/images/about-images/diagrama.png';
+import cypresstest from '../assets/images/about-images/cypresstest.png';
 
 import { useState } from 'react';
 import { Modal, Group } from '@mantine/core';
 
 export const AboutProject = () => {
   const [opened, setOpened] = useState(false);
+  const [openedCypress, setOpenedCypress] = useState(false);
 
   return (
     <div className="about-project-container">
@@ -75,10 +77,22 @@ export const AboutProject = () => {
             <img className="img__card-product-img" src={epayco} alt="img" />
             <h2 className="h2__card-product-title">Epayco</h2>
           </div>
-          <div className="div__card-product-container">
-            <img className="img__card-product-img" src={cypress} alt="img" />
-            <h2 className="h2__card-product-title">Cypress</h2>
-          </div>
+          <Modal
+            size="65%"
+            opened={openedCypress}
+            onClose={() => setOpenedCypress(false)}
+            withCloseButton={false}>
+            <img className="img_modal_diagram" src={cypresstest} alt="img" />
+          </Modal>
+          <Group position="center">
+            <div
+              id="show-modal-cypress"
+              className="div__card-product-container"
+              onClick={() => setOpenedCypress(true)}>
+              <img className="img__card-product-img" src={cypress} alt="img" />
+              <h2 className="h2__card-product-title">Cypress</h2>
+            </div>
+          </Group>
           <div className="div__card-product-container">
             <img className="img__card-product-img" src={netlify} alt="img" />
             <h2 className="h2__card-product-title">Netlify</h2>
@@ -120,10 +134,17 @@ export const AboutProject = () => {
             <img className="img__card-product-img" src={cloudinary} alt="img" />
             <h2 className="h2__card-product-title">Cloudinary</h2>
           </div>
-          <div className="div__card-product-container">
-            <img className="img__card-product-img" src={jest} alt="img" />
-            <h2 className="h2__card-product-title">Jest</h2>
+
+          <div id="show-test-jest" className="div__card-product-container">
+            <a
+              className="url-test-jest"
+              target="_blank"
+              href="https://test-clone-slack.netlify.app/">
+              <img className="img__card-product-img" src={jest} alt="img" />
+              <h2 className="h2__card-product-title">Jest</h2>
+            </a>
           </div>
+
           <div className="div__card-product-container">
             <img className="img__card-product-img" src={heroku} alt="img" />
             <h2 className="h2__card-product-title">Heroku</h2>

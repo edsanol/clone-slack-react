@@ -66,7 +66,12 @@ export const Aside = ({
   }, [socket, channelIds()]);
 
   return (
-    <div className={OpenCloseAside === 'hiddenAside' ? 'aside-container-open' : 'aside-container'}>
+    <div
+      className={
+        OpenCloseAside === 'hiddenAside'
+          ? 'aside-container-open'
+          : 'aside-container'
+      }>
       <section className="aside-section-workspace">
         {workspaceByUser
           .filter((workspace) => workspace.users.includes(memberInChannel))
@@ -92,7 +97,7 @@ export const Aside = ({
           {workspaceByUser
             .filter((workspace) => workspace._id === workspaceActive)
             .map((workspace) => {
-              return <p key={workspace._id}>{workspace.name}ㅤ⌵</p>;
+              return <p key={workspace._id}>{workspace.name}ㅤ</p>;
             })}
         </div>
 
