@@ -5,6 +5,7 @@ const initialState = {
   description: null,
   channels: [],
 };
+
 export const channelReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'CREATE_CHANNEL':

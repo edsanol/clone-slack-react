@@ -34,6 +34,7 @@ import { Modal, Group } from '@mantine/core';
 export const AboutProject = () => {
   const [opened, setOpened] = useState(false);
   const [openedCypress, setOpenedCypress] = useState(false);
+  // about
 
   return (
     <div className="about-project-container">
